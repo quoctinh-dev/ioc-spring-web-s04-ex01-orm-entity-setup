@@ -16,17 +16,17 @@ public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id") // Khóa chính là id theo SQL trong ảnh
+    @Column(name = "id") 
     private Long id;
 
     @Column(name = "title", length = 255, nullable = false)
     private String title;
 
     @Column(name = "status")
-    @Enumerated(EnumType.STRING) // Tự động mapping với tập check ('ACTIVE','INACTIVE',...) của cột varchar
+    @Enumerated(EnumType.STRING) 
     private CourseStatus status;
 
     @ManyToOne
-    @JoinColumn(name = "instructor_id", nullable = false) // Khóa ngoại liên kết, không được phép null giống như SQL
+    @JoinColumn(name = "instructor_id", nullable = false) 
     private Instructor instructor;
 }
