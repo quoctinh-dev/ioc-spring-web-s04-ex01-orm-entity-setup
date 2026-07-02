@@ -15,12 +15,12 @@ public class Instructor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id") // Trong ảnh primary key đặt tên là id (không phải instructor_id)
+    @Column(name = "id") 
     private Long id;
 
-    @Column(name = "name", length = 100, nullable = false) // length = 100 theo đúng varchar(100) trong ảnh
+    @Column(name = "name", length = 100, nullable = false) 
     private String name;
 
-    @Column(name = "email", length = 255) // Không thấy check unique trong log SQL nên để bình thường
+    @Column(name = "email", length = 255) 
     private String email;
 }
